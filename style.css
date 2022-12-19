@@ -20,6 +20,12 @@ body {
 p {
     color: #8F8F8F;
 }
+a {
+    color: #000000;
+}
+a:hover {
+    text-decoration: none;
+}
 #navigation {
     display: flex;
     padding-left: 30px;
@@ -32,8 +38,13 @@ p {
     letter-spacing: 1.5px;
     color: #8F8F8F;
 }
-#navigation .selected {
+#navigation a {
+    color: #8F8F8F;
+    text-decoration: none;
+}
+#navigation .selected a {
     color: #333333;
+    text-decoration: none;
 }
 #main-container {
     display: flex;
@@ -83,6 +94,7 @@ p {
 @media only screen and (hover: none) and (pointer: coarse) {
     h1 {
         letter-spacing: 0;
+        margin-top: 0;
     }
     #gallery {
         flex-direction: column;
@@ -94,9 +106,13 @@ p {
     #navigation {
         justify-content: center;
         margin-top: 20px;
-        margin-bottom: 30px;
+        border-bottom: solid 1px #dddddd;
+        padding-bottom: 20px;
     }
     #navigation .navigation-item {
         letter-spacing: 1px;
+    }
+    #navigation a {
+        font-weight: 600;
     }
 }
