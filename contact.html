@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+    form label {
+        color: #8F8F8F;
+    }
+    form .form-item {
+        margin-top: 20px;
+    }
+    form .form-item label {
+        margin-bottom: 5px;
+    }
+    input, label {
+        display: block;
+    }
+    input {
+        height: 24px;
+    }
+    select {
+        min-width: 200px;
+        border: solid 1px #2F2F2F;
+        background-color: white;
+    }
+    textarea {
+        width: 50%;
+        min-height: 150px;
+        outline: none !important;
+        border: solid 1px red;
+    }
+    input[type=text], input[type=email], textarea {
+        width: 50%;
+        border: solid 1px #2F2F2F;
+    }
+    @media only screen and (hover: none) and (pointer: coarse) {
+        textarea {
+            width: 90%;
+        }
+        input[type=text], input[type=email], textarea {
+            width: 90%;
+        }
+    }
+</style>
+</head>
+<body>
+<div id="navigation">
+    <div class="navigation-item">
+        <a href="index.html">LensCare</a>
+    </div>
+    <div class="navigation-item">
+        <a href="wordmo.html">Wordmo</a>
+    </div>
+    <div class="navigation-item selected">
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+<div id="main-container">
+    <h2>Complete the form below</h2>
+    <form id="contact" method="post" action="https://api.staticforms.xyz/submit">
+        <input type="hidden" name="accessKey" value="7293a0f9-8a7f-4735-b2c1-76af44651e4e">
+        <input type="hidden" name="redirectTo" value="https://www.gregorke.com/contact-done.html">
+        <input type="text" name="honeypot" style="display: none;">
+        <div class="form-item">
+            <label for="product">Product (required)</label>
+            <select name="$product" id="product" required>
+                <option value=""></option>
+                <option value="LensCare">LensCare</option>
+                <option value="Wordmo">Wordmo</option>
+            </select>
+        </div>
+        <div class="form-item">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="form-item">
+            <label for="email">Email Address (required)</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-item">
+            <label for="subject">Subject (required)</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-item">
+            <label for="message">Message (required)</label>
+            <textarea id="message" name="message" form="contact" required></textarea>
+        </div>
+        <div class="form-item">
+            <input type="submit" id="submit-button">
+        </div>
+    </form>
+    <div id="copyright">
+        <p>&#169; 2014 - 2023 Gregor Kerstein</p>
+    </div>
+</div>    
+</body>
+</html>
